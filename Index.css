@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "Roboto-Slab", "Arial", sans-serif;
+    font-family: "Roboto-Slab";
     src: url("fonts/Roboto-Slab-Regular.woff2") format("woff2"), 
         url("fonts/Roboto-Slab-Regular.woff") format("woff");
     font-weight: 400;
@@ -10,6 +10,10 @@ body{
     margin:0px;
     display: flex;
     flex-direction: column;
+}
+
+button{
+    cursor: pointer;
 }
 
 header{
@@ -49,7 +53,11 @@ menu.navigation_menu{
     padding-inline-start: 30px;
 }
 
-il.menu_elements  a{
+li.menu_elements{
+    list-style-type: none;
+}
+
+li.menu_elements  a{
     font-size: 14px;
     font-family: "Montserrat";
     color: rgb(255, 255, 255);
@@ -64,7 +72,7 @@ section.home{
     flex-direction: column;
     align-items: center;
     height: 770px;
-    background-image: url(Assets/1_Home/HomeBG.png);
+    background-image: url(assets/1_home/home_bg.png);
     background-position-x: center;
     margin-top: -103px;
 }

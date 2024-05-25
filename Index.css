@@ -1,3 +1,11 @@
+@font-face {
+    font-family: "Roboto-Slab", "Arial", sans-serif;
+    src: url("fonts/Roboto-Slab-Regular.woff2") format("woff2"), 
+        url("fonts/Roboto-Slab-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
 body{
     margin:0px;
     display: flex;
@@ -51,19 +59,29 @@ il.menu_elements  a{
 }
 
 section.home{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 770px;
     background-image: url(Assets/1_Home/HomeBG.png);
     background-position-x: center;
-    background-color: black;
     margin-top: -103px;
+}
+
+div.home_bg_toner{
+    position: absolute;
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.451;
+    width: 1600px;
+    height: 770px;     
 }
 
 div.home_elements{
     margin: auto;
     text-align: center;
+    z-index: 1;
 }
 
 h2.home_welcome{
@@ -78,7 +96,7 @@ h2.home_welcome{
 
 p.home_welcome_description{
     font-size: 24px;
-    font-family: "Roboto Slab";
+    font-family: "Roboto-Slab", "Arial", sans-serif;
     font-weight: 400;
     color: rgb(255, 255, 255);
     text-transform:capitalize;
@@ -128,7 +146,7 @@ h2.section_title{
 
 p.section_title_description{
     font-size: 16px;
-    font-family: "Roboto Slab";
+    font-family: "Roboto-Slab", "Arial", sans-serif;
     color: rgb(85, 85, 85);
     line-height: 1.5;      
     margin-top: 25px;
@@ -184,7 +202,7 @@ h3.service_ico_title{
 
 p.servicer_ico_description{
     font-size: 14px;
-    font-family: "Roboto Slab";
+    font-family: "Roboto-Slab", "Arial", sans-serif;
     color: rgb(85, 85, 85);
     line-height: 1.714;
     width: 315px;
@@ -207,12 +225,247 @@ div.about_description_conteyner{
 
 div.about_description_block p{
     font-size: 14px;
-    font-family: "Roboto Slab";
-    font-weight: 400;
+    font-family: "Roboto-Slab", "Arial", sans-serif;
     color: rgb(85, 85, 85);
     line-height: 1.714;
     width: 555px;
     height: 110px;
     text-align:start;
+}
+
+div.employers_slider{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 1140px;
+    height: 310px;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 75px;
+}
+
+div.employer_foto_container{
+    position: relative;
+    background-color: black;
+    height: 250px;
+}
+
+div.employer_link_conteyner{
+    display: flex;
+    width: 28px;
+    height: 28px;
+}
+
+div.employer_link_conteyner:hover{
+    background-color: rgb(192, 48, 28);
+    opacity: 1;
+}
+
+div.employer_contacts{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    bottom: 30px;
+    left: 78px;
+    text-align: center;
+    visibility: hidden;
+}
+
+  
+a.employer_contacts_fotolink{
+    margin: auto;
+}
+
+img.employer_foto:hover{
+    opacity: 0.502;      
+
+}
+
+img.employer_foto:hover +*{    
+    visibility: visible;
+}
+
+
+div.employer_foto_container:hover img.employer_foto{
+    opacity: 0.502;
+}
+
+div.employer_link_conteyner:hover{
+    background-color: rgb(192, 48, 28);
+    visibility: visible;
+}
+
+.employer_contacts:hover .employer_link_conteyner,
+.employer_link_conteyner:hover {
+    visibility: visible;
+}
+
+
+p.employer_name{
+    font-size: 14px;
+    font-family: "Montserrat";
+    color: rgb(85, 85, 85);
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+p.employer_post{
+    font-size: 13px;
+    font-family: "Roboto-Slab", "Arial", sans-serif;
+    color: rgb(85, 85, 85);
+    line-height: 1.846;
+    margin-top: 0px;
+}
+
+div.slider_left_button_block{
+    position: absolute;
+    top:105px;
+    left: 0px;
+}
+
+div.slider_right_button_block{
+    position: absolute;
+    top:105px;
+    right: 0px;
+}
+
+button.employer_slider_left_angel{
+    background-color: rgba(85, 85, 85, 0.2);
+    width: 35px;
+    height: 38px;
+    border: 0px;
+}
+
+button.employer_slider_left_angel:active{
+    background-color: rgb(192, 48, 28);
+}
+
+button.employer_slider_right_angel{
+    background-color: rgba(85, 85, 85, 0.2);
+    width: 35px;
+    height: 38px;
+    border: 0px;
+}
+
+button.employer_slider_right_angel:active{
+background-color: rgb(192, 48, 28);
+}
+
+i.employer_slider_angel{
+    font-size: 18px;
+    color: rgb(221, 221, 221);      
+}
+  
+section.works{
+    height: 1381px;
+    width: 1140px;
+    text-align: center;
+    margin: auto;
+}
+
+menu.works_filters{
+    display: flex;
+    width: 415px;
+    padding-inline-start: 0px;
+    margin: auto;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+li.works_filter{
+    list-style-type: none;
+}
+
+li.works_filter a{
+        font-size: 16px;
+        font-family: "Roboto Slab", "Arial", sans-serif;
+        color: rgb(85, 85, 85);
+        text-transform: capitalize;
+        text-decoration: none;
+}
+
+li.active a{
+    color: rgb(192, 48, 28);
+}
+
+div.works-illustration-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 70px;
+    width: 1140px;
+    height: 1020px;
+}
+
+div.illustration-level{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 320px;
+}
+
+div.work-illustration{
+    position: relative;
+}
+
+div.caption{
+    display: none;
+    background-color: rgba(192, 48, 28,0.702);
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    width: 360px;
+    height: 320px;
+}
+
+img:hover + .caption{
+    display: block;
+}
+
+.caption:hover{
+ display: block;
+}
+
+h3.work-name{
+    margin-top: 105px;
+    font-size: 18px;
+    font-family: "Montserrat", "Arial", sans-serif;
+    color: rgb(255, 255, 255);
+    line-height: 1.333;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+
+p.work-type{
+    font-size: 12px;
+    font-family: "Roboto Slab", "Arial", sans-serif;
+    color: rgb(255, 255, 255);
+    line-height: 2;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 0px;
+    margin-bottom: 25px;
+}
+
+button.work-view{
+    cursor: pointer;
+    font-size: 14px;
+    font-family: "Roboto Slab", "Arial", sans-serif;
+    color: rgb(192, 48, 28);
+    border: 0px;
+    text-transform: uppercase;
+    line-height: 1.714;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    width: 100px;
+    height: 38px;
+}
+
+button.work-view  i{
+    margin-left: 15px;
+    font-size: 18px;
+    line-height: 1.714;
 }
   

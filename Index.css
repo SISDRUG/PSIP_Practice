@@ -151,6 +151,51 @@ header{
     margin-top: 40px
 }
 
+.modal{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.hidden{
+    display: none;
+}
+
+.modal-content {
+    background-color: #555;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+}
+
+.modal-content h3{
+    font-size: 36px;
+    color: rgb(255, 255, 255);
+    font-family: "Montserrat", "Arial", sans-serif ;
+    text-transform: uppercase;
+}
+
+/* Кнопка закрыть (x) */
+.modal-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: black;
+    cursor: pointer;
+}
+
+
 .home__elements button:hover{
     color: rgb(192, 48, 28);
     background-color: rgb(255, 255, 255); 
@@ -433,16 +478,12 @@ background-color: rgb(192, 48, 28);
     list-style-type: none;
 }
 
-.works__filters li a{
+.works__filters li p{
         font-size: 16px;
         font-family: "Roboto-Slab", "Arial", sans-serif;
         color: rgb(85, 85, 85);
         text-transform: capitalize;
         text-decoration: none;
-}
-
-.works__filters li.active a{
-    color: rgb(192, 48, 28);
 }
 
 .works__illustration-container{

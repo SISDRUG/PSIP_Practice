@@ -7,6 +7,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="index.css">
+        
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- <link rel="preload" href="fonts/Roboto-Slab-Regular.woff2" as="font">
         <link rel="preload" href="fonts/Roboto-Slab-Regular.woff" as="font"> -->
@@ -46,9 +47,21 @@
             <div class="home__elements">
                 <h2 >welcome to startup</h2>
                 <p >your favourite creative agency template</p>
-                <a href="#">
-                    <button type="button">get started</button>
-                </a>
+                <button type="button" id="btn-get-started">get started</button>
+                <div id="modal-get-started" class="modal hidden">
+                    <div class="modal-content">
+                        <span class="modal-close">&times;</span>
+                        <h3>Get started</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam nonumy eirtempor
+                            invidunt ut labore et dolore aliquyam erat, sed diam voluptua. At vero eos eaccusam
+                            et justo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                            Lorem ipsum dolor sit amet. Lorem ipsum dolor et dolore aliquyam erat. Loreipsum
+                            dolor sit amet. Lorem ipsum dolor et.
+                        </p>
+                        <button id="btn-get-contact">contact with us</button>
+                      </div>
+                </div>
             </div>
         </section>
 
@@ -108,7 +121,7 @@
 
                     <div>
                         <div class="employer-foto-container">
-                            <img src="assets/3_about_us/employer_1.png" alt="employer_1">
+                            <img src="assets/3_about_us/employer_0.png" alt="employer_0" id="employer_0">
                             <div class="employer-contacts">
                                 <div class="employer-link-conteyner">
                                     <a href="#"><img src="assets/3_about_us/facebook_logo.png" alt="facebook_logo"></a>
@@ -130,7 +143,7 @@
 
                     <div>
                         <div class="employer-foto-container">
-                            <img src="assets/3_about_us/employer_2.png" alt="employer_1">
+                            <img src="assets/3_about_us/employer_1.png" alt="employer_1" id="employer_1">
                             <div class="employer-contacts">
                                 <div class="employer-link-conteyner">
                                     <a href="#"><img src="assets/3_about_us/facebook_logo.png" alt="facebook_logo"></a>
@@ -152,7 +165,7 @@
 
                     <div>
                         <div class="employer-foto-container">
-                            <img src="assets/3_about_us/employer_3.png" alt="employer_1">
+                            <img src="assets/3_about_us/employer_2.png" alt="employer" id="employer_2">
                             <div class="employer-contacts">
                                 <div class="employer-link-conteyner">
                                     <a href="#"><img src="assets/3_about_us/facebook_logo.png" alt="facebook_logo"></a>
@@ -174,7 +187,7 @@
 
                     <div>
                         <div class="employer-foto-container">
-                            <img src="assets/3_about_us/employer_4.png" alt="employer_1">
+                            <img src="assets/3_about_us/employer_3.png" alt="employer" id="employer_3">
                             <div class="employer-contacts">
                                 <div class="employer-link-conteyner">
                                     <a href="#"><img src="assets/3_about_us/facebook_logo.png" alt="facebook_logo"></a>
@@ -195,13 +208,13 @@
                     </div>
 
                     <div class="slider__left-button-block">
-                        <button type="button">
+                        <button type="button" id="employers-slider-left">
                             <i class="employer_slider_angel fa fa-angle-left" aria-hidden="true"></i>
                             <p>slide left</p>
                         </button>
                     </div>
                     <div class="slider__right-button-block">
-                        <button type="button">
+                        <button type="button" id="employers-slider-right">
                             <i class="employer_slider_angel fa fa-angle-right" aria-hidden="true"></i>
                             <p>slide right</p>
                         </button>
@@ -213,20 +226,20 @@
         <section class="works" id="Works">
             <h2 class="section__title">latest works</h2>
             <menu class="works__filters">
-                <li class="active">
-                    <a href="#Works">all</a>
+                <li>
+                    <p class="work__filter">all</p>
                 </li>
                 <li >
-                    <a href="#Works" aria-current="true">branding</a>
+                    <p class="work__filter">branding</p>
                 </li>
                 <li>
-                    <a href="#Works">design</a>
+                    <p class="work__filter">design</p>
                 </li>
                 <li>
-                    <a href="#Works">development</a>
+                    <p class="work__filter">development</p>
                 </li>
                 <li>
-                    <a href="#Works">strategy</a>
+                    <p class="work__filter">strategy</p>
                 </li>
             </menu>
 
@@ -631,5 +644,6 @@
                 </p>
             </div>
         </footer>
+        <script src="scripts/main.js"></script>
     </body>
 </html>

@@ -8,39 +8,40 @@ btnStarted.addEventListener('click',onBtnStartedClick);
 
 function onBtnStartedClick(){
     modal.style.display = 'block';
-};
 
-closeSpan.addEventListener('click',onCloseSpanClick);
 
-function onCloseSpanClick() {
-    modal.style.display = 'none';
-    modalEventHandlerClear();
-};
+    closeSpan.addEventListener('click',onCloseSpanClick);
 
-btnContacts.addEventListener('click', onBtnContactsClick);
-
-function onBtnContactsClick() {
-    modal.style.display = 'none';
-    window.location = '#Contact';
-    modalEventHandlerClear();
-};
-
-window.addEventListener('click',onWindowClick);
-
-function onWindowClick(event) {
-    if (event.target == modal) {
+    function onCloseSpanClick() {
         modal.style.display = 'none';
         modalEventHandlerClear();
     };
-};
 
-window.addEventListener('keydown', onWindowKeydownEscape );
+    btnContacts.addEventListener('click', onBtnContactsClick);
 
-function onWindowKeydownEscape(event) {
-    if (event.key === 'Escape') {
-        if (modal.style.display === 'block') {
+    function onBtnContactsClick() {
+        modal.style.display = 'none';
+        window.location = '#Contact';
+        modalEventHandlerClear();
+    };
+
+    window.addEventListener('click',onWindowClick);
+
+    function onWindowClick(event) {
+        if (event.target == modal) {
             modal.style.display = 'none';
             modalEventHandlerClear();
+        };
+    };
+
+    window.addEventListener('keydown', onWindowKeydownEscape );
+
+    function onWindowKeydownEscape(event) {
+        if (event.key === 'Escape') {
+            if (modal.style.display === 'block') {
+                modal.style.display = 'none';
+                modalEventHandlerClear();
+            };
         };
     };
 };

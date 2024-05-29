@@ -94,7 +94,8 @@ header{
     align-items: center;
     height: 770px;
     background-image: url(assets/1_home/home_bg.png);
-    background-position-x: center;
+    /* background-position-x: center; */
+    background-repeat: round;
     margin-top: -103px;
 }
 

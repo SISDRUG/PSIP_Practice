@@ -46,7 +46,24 @@
             <div class="home__elements">
                 <h2 >welcome to startup</h2>
                 <p >your favourite creative agency template</p>
-                <button type="button">get started</button>
+                <a href="#">
+                    <button type="button" id="btn-get-started">get started</button>
+                    <div id="modal-get-started" class="modal hidden">
+                        <div class="modal-content">
+                            <span class="modal-close">&times;</span>
+                            <h3>Get started</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam nonumy eirtempor
+                                invidunt ut labore et dolore aliquyam erat, sed diam voluptua. At vero eos eaccusam
+                                et justo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                                Lorem ipsum dolor sit amet. Lorem ipsum dolor et dolore aliquyam erat. Loreipsum
+                                dolor sit amet. Lorem ipsum dolor et.
+                            </p>
+                            <button id="btn-get-contact">contact with us</button>
+                      </div>
+                </div>
+
+                </a>
             </div>
         </section>
 
@@ -195,11 +212,13 @@
                     <div class="slider__left-button-block">
                         <button type="button">
                             <i class="employer_slider_angel fa fa-angle-left" aria-hidden="true"></i>
+                            <p>slide left</p>
                         </button>
                     </div>
                     <div class="slider__right-button-block">
                         <button type="button">
                             <i class="employer_slider_angel fa fa-angle-right" aria-hidden="true"></i>
+                            <p>slide right</p>
                         </button>
                     </div>
                 </div>
@@ -209,127 +228,141 @@
         <section class="works" id="Works">
             <h2 class="section__title">latest works</h2>
             <menu class="works__filters">
-                <li class="active">
-                    <a href="#Works">all</a>
-                </li>
-                <li >
-                    <a href="#Works" aria-current="true">branding</a>
+                <li>
+                    <a class="filter-item active" href="#Works">all</a>
                 </li>
                 <li>
-                    <a href="#Works">design</a>
+                    <a class="filter-item" href="#Works">branding</a>
                 </li>
                 <li>
-                    <a href="#Works">development</a>
+                    <a class="filter-item" href="#Works">design</a>
                 </li>
                 <li>
-                    <a href="#Works">strategy</a>
+                    <a class="filter-item" href="#Works">development</a>
+                </li>
+                <li>
+                    <a class="filter-item" href="#Works">strategy</a>
                 </li>
             </menu>
-
-
-
             <div class="works__illustration-container">
-                    <div class="work-illustration">
-                        <img src="assets/4_works/rectangle_1.png" alt="picture">
-                        <div class="caption">
-                            <h3>hair dresser</h3>
-                            <p>branding</p>
+                <div class="work-illustration">
+                    <img src="assets/4_works/rectangle_1.png" alt="picture">
+                    <div class="caption">
+                        <h3>hair dresser</h3>
+                        <p>branding</p>
+                        <a href="#">
                             <button type="button">
                                 view<i class="fa fa-angle-right" aria-hidden="true"></i>
                             </button>
-                        </div>
+                        </a>
                     </div>
-                    <div class="work-illustration">
-                        <img src="assets/4_works/rectangle_2.png" alt="picture">
-                        <div class="caption">
-                            <h3>hair dresser</h3>
-                            <p>branding</p>
+                </div>
+                <div class="work-illustration">
+                    <img src="assets/4_works/rectangle_2.png" alt="picture">
+                    <div class="caption">
+                        <h3>hair dresser</h3>
+                        <p>design</p>
+                        <a href="#">
                             <button type="button">
                                 view<i class="fa fa-angle-right" aria-hidden="true"></i>
                             </button>
-                        </div>
+                        </a>
                     </div>
-                    <div class="work-illustration">
-                        <img src="assets/4_works/rectangle_3.png" alt="picture">
-                        <div class="caption">
-                            <h3>hair dresser</h3>
-                            <p>branding</p>
+                </div>
+                <div class="work-illustration">
+                    <img src="assets/4_works/rectangle_3.png" alt="picture">
+                    <div class="caption">
+                        <h3>hair dresser</h3>
+                        <p>development</p>
+                        <a href="#">
                             <button type="button">
                                 view<i class="fa fa-angle-right" aria-hidden="true"></i>
                             </button>
-                        </div>
+                        </a>
                     </div>
-
-                    <div class="work-illustration">
-                        <img src="assets/4_works/rectangle_4.png" alt="picture">
-                        <div class="caption">
-                            <h3>hair dresser</h3>
-                            <p>branding</p>
+                </div>
+                <div class="work-illustration">
+                    <img src="assets/4_works/rectangle_4.png" alt="picture">
+                    <div class="caption">
+                        <h3>hair dresser</h3>
+                        <p>design</p>
+                        <a href="#">
                             <button type="button">
                                 view<i class="fa fa-angle-right" aria-hidden="true"></i>
                             </button>
-                        </div>
+                        </a>
                     </div>
-                    <div class="work-illustration">
-                        <img src="assets/4_works/rectangle_5.png" alt="picture">
-                        <div class="caption">
-                            <h3>hair dresser</h3>
-                            <p>branding</p>
+                </div>
+                <div class="work-illustration">
+                    <img src="assets/4_works/rectangle_5.png" alt="picture">
+                    <div class="caption">
+                        <h3>hair dresser</h3>
+                        <p>strategy</p>
+                        <a href="#">
                             <button type="button">
                                 view<i class="fa fa-angle-right" aria-hidden="true"></i>
                             </button>
-                        </div>
+                        </a>
                     </div>
-                    <div class="work-illustration">
-                        <img src="assets/4_works/rectangle_6.png" alt="picture">
-                        <div class="caption">
-                            <h3>hair dresser</h3>
-                            <p>branding</p>
+                </div>
+                <div class="work-illustration">
+                    <img src="assets/4_works/rectangle_6.png" alt="picture">
+                    <div class="caption">
+                        <h3>hair dresser</h3>
+                        <p>development</p>
+                        <a href="#">
                             <button type="button">
                                 view<i class="fa fa-angle-right" aria-hidden="true"></i>
                             </button>
-                        </div>
+                        </a>
                     </div>
-                    <div class="work-illustration">
-                        <img src="assets/4_works/rectangle_7.png" alt="picture">
-                        <div class="caption">
-                            <h3>hair dresser</h3>
-                            <p>branding</p>
+                </div>
+                <div class="work-illustration">
+                    <img src="assets/4_works/rectangle_7.png" alt="picture">
+                    <div class="caption">
+                        <h3>hair dresser</h3>
+                        <p>branding</p>
+                        <a href="#">
                             <button type="button">
                                 view<i class="fa fa-angle-right" aria-hidden="true"></i>
                             </button>
-                        </div>
+                        </a>
                     </div>
-                    <div class="work-illustration">
-                        <img src="assets/4_works/rectangle_8.png" alt="picture">
-                        <div class="caption">
-                            <h3>hair dresser</h3>
-                            <p>branding</p>
+                </div>
+                <div class="work-illustration">
+                    <img src="assets/4_works/rectangle_8.png" alt="picture">
+                    <div class="caption">
+                        <h3>hair dresser</h3>
+                        <p>branding</p>
+                        <a href="#">
                             <button type="button">
                                 view<i class="fa fa-angle-right" aria-hidden="true"></i>
                             </button>
-                        </div>
+                        </a>
                     </div>
-                    <div class="work-illustration">
-                        <img src="assets/4_works/rectangle_9.png" alt="picture">
-                        <div class="caption">
-                            <h3>hair dresser</h3>
-                            <p>branding</p>
+                </div>
+                <div class="work-illustration">
+                    <img src="assets/4_works/rectangle_9.png" alt="picture">
+                    <div class="caption">
+                        <h3>hair dresser</h3>
+                        <p>strategy</p>
+                        <a href="#">
                             <button type="button">
                                 view<i class="fa fa-angle-right" aria-hidden="true"></i>
                             </button>
-                        </div>
+                        </a>
                     </div>
+                </div>
             </div>
         </section>
-
-
-
          <!-- Ruslan -->
          <section class="offer color-filter">
+            <h2 class="visually-hidden">Offer</h2>
             <p>Do you like <span class="offer__text--uppercase">our work</span> so far?</p>
             <p>Let`s talk about <span class="offer__text--uppercase">your project</span>!</p>
-            <button class="offer__button" type="button">get in touch</button>
+            <a href="#">
+                <button class="offer__button" id="btn__open-modal-win" type="button">get in touch</button>
+            </a>
         </section>
         <section class="blog" id="Blog">
             <div class="container">
@@ -360,9 +393,9 @@
                                     </a>
                                     <p>
                                         By 
-                                        <a class="article-header__link">Khalil</a>
+                                        <a class="article-header__link" href="#">Khalil</a>
                                             Uddin in 
-                                        <a class="article-header__link">Development</a>
+                                        <a class="article-header__link" href="#">Development</a>
                                     </p>
                                 </div>
                             </div>
@@ -398,9 +431,9 @@
                                     </a>
                                     <p class="article-subtitle">
                                         By 
-                                        <a class="article-header__link">Khalil</a>
+                                        <a class="article-header__link" href="#">Khalil</a>
                                             Uddin in 
-                                        <a class="article-header__link">Development</a>
+                                        <a class="article-header__link" href="#">Development</a>
                                     </p>
                                 </div>
                             </div>
@@ -422,6 +455,7 @@
             </div>
         </section>
         <section class="clients" id="Clients">
+            <h2 class="visually-hidden">Clients</h2>
             <div class="clients__container">
                 <ul class="clients__list">
                     <li class="client-item">
@@ -527,31 +561,44 @@
                             <i class="fa fa-mobile-phone" aria-hidden="true"></i>
                             <div class="contact-info-fragment__title">
                                 <h3>hotline (24x7)</h3>
-                                <p>+65 0052 300, +65 88251 210</p>
-                                <p>+88 01723 511 340</p>
+                                <p>
+                                    <a href="tel:+650052300">+65 0052 300</a>, 
+                                    <a href="tel:+6588251210">+65 88251 210</a>
+                                </p>
+                                <p>
+                                    <a href="tel:+8801723511340">+88 01723 511 340</a>
+                                </p>
                             </div>
                         </div>
                         <div class="contact-info-fragment">
                             <i class="fa fa-envelope-o" aria-hidden="true"></i>
                             <div class="contact-info-fragment__title">
                                 <h3>e-mail</h3>
-                                <p>shapedtheme@gamil.com</p>
-                                <p>khalilkode@gmail.com</p>
+                                <p>
+                                    <a href="mailto:shapedtheme@gamil.com">
+                                        shapedtheme@gamil.com
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="mailto:khalilkode@gmail.com">
+                                        khalilkode@gmail.com
+                                    </a>
+                                </p>
                             </div>
                         </div>
                     </div>
                     <form class="contact-form">
                         <div class="contact-form__flex-container">
-                            <input type="text" placeholder="your name">
-                            <input type="email" placeholder="your e-mail">
+                            <input type="text" placeholder="your name" name="name" autocomplete="name">
+                            <input type="email" placeholder="your e-mail" name="email" autocomplete="email">
                         </div>
                         <div class="contact-form__flex-container">
-                            <input type="text" placeholder="your subject">
-                            <input type="text" placeholder="company name">
+                            <input type="text" placeholder="your subject" name="subject">
+                            <input type="text" placeholder="company name" name="company" autocomplete="organization">
                         </div>
-                        <textarea class="contact-form__input message" placeholder="write your message"></textarea>
+                        <textarea class="contact-form__input message" placeholder="write your message" name="message"></textarea>
                         <div class="contact-form__footer">
-                            <button class="contact-form__button" type="submit">send message</button>
+                            <button class="contact-form__button" type="submit" id="btn-send-message">send message</button>
                             <p>
                                 <span class="contact-form__string--red">*</span>
                                 We`ll contact you as as possible. We don`t reply on Monday.
@@ -563,40 +610,24 @@
         </section>
         <footer>
             <ul class="footer__social-net-icons-list">
-                <li>
+                <li class="social-net-icon-border">
                     <a href="#">
-                        <div class="social-net-icon-border">
-                            <div class="social-net-icon-wrapper">
-                                <img src="assets/8_footer/fa-twitter.png" alt="twitter">
-                            </div>
-                        </div>
+                        <img src="assets/8_footer/fa-twitter.png" alt="twitter">
                     </a>
                 </li>
-                <li>
+                <li class="social-net-icon-border">
                     <a href="#">
-                        <div class="social-net-icon-border">
-                            <div class="social-net-icon-wrapper">
-                                <img src="assets/8_footer/fa-twitter.png" alt="twitter">
-                            </div>
-                        </div>
+                        <img src="assets/8_footer/fa-twitter.png" alt="twitter">
                     </a>
                 </li>
-                <li>
+                <li class="social-net-icon-border">
                     <a href="#">
-                        <div class="social-net-icon-border">
-                            <div class="social-net-icon-wrapper">
-                                <img src="assets/8_footer/fa-twitter.png" alt="twitter">
-                            </div>
-                        </div>
+                        <img src="assets/8_footer/fa-twitter.png" alt="twitter">
                     </a>
                 </li>
-                <li>
+                <li class="social-net-icon-border">
                     <a href="#">
-                        <div class="social-net-icon-border">
-                            <div class="social-net-icon-wrapper">
-                                <img src="assets/8_footer/fa-twitter.png" alt="twitter">
-                            </div>
-                        </div>
+                        <img src="assets/8_footer/fa-twitter.png" alt="twitter">
                     </a>
                 </li>
             </ul>
@@ -607,5 +638,6 @@
                 </p>
             </div>
         </footer>
+        <script src="main.js"></script>
     </body>
 </html>

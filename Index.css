@@ -14,6 +14,22 @@
     font-style: normal;
 }
 
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 body{
     margin:0px;
     display: flex;
@@ -78,7 +94,7 @@ header{
     align-items: center;
     height: 770px;
     background-image: url(assets/1_home/home_bg.png);
-    background-position-x: center;
+    background-repeat: round;
     margin-top: -103px;
 }
 
@@ -87,7 +103,7 @@ header{
     display: flex;
     background-color: rgb(0, 0, 0);
     opacity: 0.451;
-    width: 1600px;
+    width: 100%;
     height: 770px;     
 }
 
@@ -137,6 +153,50 @@ header{
 .home__elements button:hover{
     color: rgb(192, 48, 28);
     background-color: rgb(255, 255, 255); 
+}
+
+.modal{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.hidden{
+    display: none;
+}
+
+.modal-content {
+    background-color: #555;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+}
+
+.modal-content h3{
+    font-size: 36px;
+    color: rgb(255, 255, 255);
+    font-family: "Montserrat", "Arial", sans-serif ;
+    text-transform: uppercase;
+}
+
+/* Кнопка закрыть (x) */
+.modal-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: black;
+    cursor: pointer;
 }
   
 .services{
@@ -270,7 +330,6 @@ header{
     display: flex;
     flex-direction: row;
     width: 1140px;
-    height: 310px;
     justify-content: space-between;
     margin: auto;
     margin-top: 75px;
@@ -343,7 +402,7 @@ header{
     color: rgb(85, 85, 85);
     text-transform: uppercase;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .employer-post{
@@ -351,7 +410,7 @@ header{
     font-family: "Roboto-Slab", "Arial", sans-serif;
     color: rgb(85, 85, 85);
     line-height: 1.846;
-    margin-top: 0px;
+    margin-top: 10px;
 }
 
 .slider__left-button-block{
@@ -360,11 +419,19 @@ header{
     left: 0px;
 }
 
+.slider__left-button-block p{
+ font-size: 0px;
+}
+
 .slider__right-button-block{
     position: absolute;
     top:105px;
     right: 0px;
 }
+
+.slider__right-button-block p{
+    font-size: 0px;
+   }
 
 .slider__left-button-block button{
     background-color: rgba(85, 85, 85, 0.2);
@@ -389,10 +456,10 @@ background-color: rgb(192, 48, 28);
 }
   
 .works{
-    height: 1381px;
     width: 1140px;
     text-align: center;
     margin: auto;
+    margin-bottom: 100px;
 }
 
 
@@ -409,16 +476,16 @@ background-color: rgb(192, 48, 28);
     list-style-type: none;
 }
 
-.works__filters li a{
-        font-size: 16px;
-        font-family: "Roboto Slab", "Arial", sans-serif;
-        color: rgb(85, 85, 85);
-        text-transform: capitalize;
-        text-decoration: none;
+.filter-item{
+    font-size: 16px;
+    font-family: "Roboto-Slab", "Arial", sans-serif;
+    color: rgb(85, 85, 85);
+    text-transform: capitalize;
+    text-decoration: none;
 }
 
-.works__filters li.active a{
-    color: rgb(192, 48, 28);
+.active {
+    color:rgb(192, 48, 28);
 }
 
 .works__illustration-container{
@@ -431,6 +498,10 @@ background-color: rgb(192, 48, 28);
 
 .work-illustration{
     position: relative;
+}
+
+.work-hide {
+    display: none;
 }
 
 .caption{
@@ -464,7 +535,7 @@ img:hover + .caption{
 
 .caption p{
     font-size: 12px;
-    font-family: "Roboto Slab", "Arial", sans-serif;
+    font-family: "Roboto-Slab", "Arial", sans-serif;
     color: rgb(255, 255, 255);
     line-height: 2;
     text-align: center;
@@ -476,7 +547,7 @@ img:hover + .caption{
 .caption button{
     cursor: pointer;
     font-size: 14px;
-    font-family: "Roboto Slab", "Arial", sans-serif;
+    font-family: "Roboto-Slab", "Arial", sans-serif;
     color: rgb(192, 48, 28);
     border: 0px;
     text-transform: uppercase;
@@ -575,24 +646,21 @@ img:hover + .caption{
     color: #C0301C;
 }
 
-
 .blog__articles {
     margin-top: 77px;
 }
 
-.blog__articles > div:not(:first-of-type)::before {
-    position: absolute;
-    width: 1140px;
-    color: rgba(0, 0, 0, 0);
-    content: "";
-    border-top: 1px solid #ddd;
-    margin: -40px 0px;
-}
 
 .blog__article {
     position: relative;
     display:flex;
-    margin-bottom: 77px;
+    margin-top: 39px;
+    margin-bottom: 39px;
+}
+
+.blog__articles > div:not(:last-of-type) {
+    border-bottom: solid rgb(221, 221, 221) 1px;
+    padding-bottom: 39px;
 }
 
 
@@ -641,6 +709,10 @@ img:hover + .caption{
 .article-header__link {
     text-decoration: none;
     cursor: pointer;
+}
+
+.article-header__link:visited {
+    color: #777;
 }
 
 .article-header__link:hover,
@@ -798,6 +870,12 @@ img:hover + .caption{
     color: #555;
 }
 
+.contact-info-fragment__title a {
+    text-decoration: none;
+    color: #555;
+}
+
+
 .contact-info-fragment i {
     font-size: 20px;
     width: 33px;
@@ -847,7 +925,7 @@ img:hover + .caption{
     width: 688px;
     padding: 18px;
     border: 1px solid #555;
-    resize: none;
+    resize: vertical;
 }
 
 .contact-form__footer {
@@ -872,7 +950,6 @@ img:hover + .caption{
     color: #fff;
 }
 
-/* Добавить шрифт */
 .contact-form__footer p {
     font-family: "Roboto-Slab", "Arial", sans-serif;
     font-size: 12px;
@@ -885,8 +962,6 @@ img:hover + .caption{
     color: #C0301C;
 }
 
-
-/* footer */
 footer {
     margin-top: 100px;
     background-color: #C0301C;

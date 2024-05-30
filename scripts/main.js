@@ -1,3 +1,47 @@
+//#region section.work
+function showAllWorkIllustrations() {
+    const workIllustrations = document.querySelectorAll(".work-illustration");
+
+    workIllustrations.forEach(workIllustration => {
+        workIllustration.classList.remove("work-hide");
+    });
+}
+
+function showFilterItemWorkIllustration(element) {
+    const workIllustrations = document.querySelectorAll(".work-illustration");
+    console.log(workIllustrations);
+
+    workIllustrations.forEach(workIllustration => {
+        const paragrafContent = workIllustration.querySelector("p").textContent;
+
+        if(element.textContent != paragrafContent) {
+            workIllustration.classList.add("work-hide");
+        }
+        else {
+            workIllustration.classList.remove("work-hide");
+        }
+    });
+}
+
+function onFilterItemClick(filterElement) {  
+    const filterMenuItems = document.querySelectorAll(".filter-item");
+
+    filterMenuItems.forEach(filterMenuItem => {
+        filterMenuItem.classList.remove("active");
+    });
+
+    filterElement.classList.add("active");
+
+    if(filterElement.textContent == "all") {
+        showAllWorkIllustrations();
+        return;
+    }
+    else {
+        showFilterItemWorkIllustration(filterElement);
+    }
+}
+//#endregion
+
 //#region modal get start
 const modal = document.querySelector('#modal-get-started');
 const btnStarted = document.querySelector('#btn-get-started');
@@ -55,52 +99,19 @@ function modalEventHandlerClear(){
 
 //#endregion
 
-//#region works-filter
 
-const workIlustratoins = document.querySelectorAll('.work-illustration');
-const brandings = document.querySelectorAll('#branding-ilustrations .work-illustration');
-const filters = document.querySelectorAll('.work__filter');
-filters[0].style.color = 'rgb(192, 48, 28)';
+const works = document.querySelector(".works");
 
-filters.forEach(filter =>{
-    filter.addEventListener('click', onFilterClick);
-});
+if(works) {
+    const filterItems = document.querySelectorAll(".filter-item");
 
-function onFilterClick(){
-    filters.forEach(filter => filter.style.color = 'rgb(85,85,85)');
-    this.style.color = 'rgb(192, 48, 28)';
+    filterItems.forEach(filterItem => {
+        filterItem.addEventListener("click", () => onFilterItemClick(filterItem))
+    });
 }
 
-//#endregion
+const home = document.querySelector(".home");
 
-
-//#region employer-slider
-
-// let current = 0;
-// let images = []; // Массив с путями к изображениям
-
-// for (let i = 0; i < 6; i++) {
-//     images[i] = `assets/3_about_us/employer_${i}.png`;
-// }
-
-// function updateSlider() {
-//     for (let i = 0; i < 4; i++) {
-//         let imgElement = document.getElementById(`employer_${i}`);
-//         imgElement.src = images[(current + i) % images.length];
-//     }
-// }
-
-// document.getElementById('employers-slider-right').addEventListener('click', function() {
-//     current = (current + 1) % images.length;
-//     updateSlider();
-// });
-
-// document.getElementById('employers-slider-left').addEventListener('click', function() {
-//     current = (current - 1 + images.length) % images.length;
-//     updateSlider();
-// });
-
-// updateSlider();
-
-
-//#endregion
+if(home) {
+    btnStarted.addEventListener('click',onBtnStartedClick);
+}

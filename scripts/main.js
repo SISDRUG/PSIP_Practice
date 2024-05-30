@@ -115,3 +115,20 @@ const home = document.querySelector(".home");
 if(home) {
     btnStarted.addEventListener('click',onBtnStartedClick);
 }
+
+//#region employer-swiper
+                    
+const mySwiper = new Swiper('.swiper-container', {
+    // Параметры слайдера
+    slidesPerView: 4,//设置slider容器能够同时显示的slides数量(carousel模式)。
+    spaceBetween: 30,
+    loop: true,
+    // Настройка навигации
+    navigation: {
+    nextEl: '.slider__right-button-block',
+    prevEl: '.slider__left-button-block',
+    },
+    
+});
+
+//#endregion

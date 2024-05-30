@@ -14,6 +14,28 @@
     font-style: normal;
 }
 
+.swiper-container{
+    width: 1140px;
+    position: relative;
+    margin-top: 70px;
+    overflow: hidden;
+}
+
+.swiper-wrapper{
+    width: 1140px;
+}
+
+.swiper-button-prev{
+    position: absolute;
+    left: 0px;
+}
+
+.swiper-button-next{
+    position: absolute;
+    right: 0px;
+}
+
+
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -460,6 +482,7 @@ header{
 }
 
 .slider__left-button-block{
+    z-index: 1;
     position: absolute;
     top:105px;
     left: 0px;
@@ -470,6 +493,7 @@ header{
 }
 
 .slider__right-button-block{
+    z-index: 1;
     position: absolute;
     top:105px;
     right: 0px;
@@ -477,7 +501,7 @@ header{
 
 .slider__right-button-block p{
     font-size: 0px;
-   }
+}
 
 .slider__left-button-block button{
     background-color: rgba(85, 85, 85, 0.2);

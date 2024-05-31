@@ -132,3 +132,26 @@ const mySwiper = new Swiper('.swiper-container', {
 });
 
 //#endregion
+
+const clients = document.querySelector(".clients");
+
+if(clients) {
+    const swiper = new Swiper(".clients-swiper-container", {
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disabledOnInteractive:false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '"></span>';
+            },
+        },
+    });
+}
+
+AOS.init();
+

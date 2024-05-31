@@ -779,6 +779,7 @@ img:hover + .caption{
 .article-header__link {
     text-decoration: none;
     cursor: pointer;
+    color: #777;
 }
 
 .article-header__link:visited {
@@ -847,14 +848,17 @@ img:hover + .caption{
 .clients {
     margin-top: 100px;
     background-color: #F8F8F8;
+    padding-bottom: 150px;
 }
 
 .clients__container {
-    width: 900px;
+    width: 1140px;
     margin: 0 auto;
 }
 
 .clients__list {
+    width: 900px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     list-style-type: none;
@@ -875,6 +879,26 @@ img:hover + .caption{
     width: 765px;
 }
 
+.clients-swiper-container {
+    position: relative;
+    overflow: hidden;
+    width: 765px;
+    margin: 0 auto;
+}
+
+.swiper-custom-pagination .swiper-pagination-bullet {
+    margin-top: 40px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color:#ddd;
+    opacity: 1;
+}
+
+.swiper-custom-pagination .swiper-pagination-bullet-active {
+    background-color: #C0301C;
+}
+
 .choosed{
     display: block;
 }
@@ -889,27 +913,8 @@ img:hover + .caption{
     font-style: normal;
     text-align: center;
     margin-top: 45px;
+    margin-bottom: 63px;
     color: #555;
-}
-
-.circles {
-    margin: 0 auto;
-    margin-top: 40px;
-    margin-bottom: 100px;
-    display: flex;
-    width: 55px;
-    justify-content: space-between;
-}
-
-.circle {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color:#ddd ;
-}
-
-.circle-chacked {
-    background-color: #C0301C;
 }
 
 .contact__content {

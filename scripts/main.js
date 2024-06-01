@@ -1,4 +1,103 @@
-//#region section.work
+//#region modaquerySelectorl getStart
+function onShowGetStartedButtonClick() {
+    const modal = document.querySelector("#modal-get-started");
+    const closeModalButton = modal.querySelector(".modal-close");
+    const contactModalButton = modal.querySelector("#btn-get-contact");
+    
+
+    modal.classList.remove("hidden");
+
+    document.addEventListener("keydown", onEscapeFromModalKeydown);
+
+    function onEscapeFromModalKeydown(e) {
+        if(e.code == "Escape") {
+            closeModal();
+        }
+    }
+
+
+    closeModalButton.addEventListener("click", onCloseModalButtonClick);
+
+    function onCloseModalButtonClick() {
+        closeModal();
+	};
+
+
+    window.addEventListener("click", onWindowClick);
+
+    function onWindowClick(e) {
+        if (e.target == modal) {
+            modal.classList.add("hidden");
+            closeModal();
+        };
+    };
+
+
+    contactModalButton.addEventListener("click", onMoveToContactButtonClick);
+
+    function onMoveToContactButtonClick() {
+        closeModal();
+    }
+
+    function closeModal() {
+        modal.classList.add("hidden");
+        removeEvents();
+    }
+
+    function removeEvents() {
+        closeModalButton.removeEventListener("click", onCloseModalButtonClick);
+        contactModalButton.removeEventListener("click", onMoveToContactButtonClick);
+        document.removeEventListener("keydown", onEscapeFromModalKeydown);
+        window.removeEventListener("click", onWindowClick);
+    }
+}
+
+
+const home = document.querySelector(".home");
+
+if(home) {
+    const showGetStartedButton = home.querySelector("#btn-get-started");
+    showGetStartedButton.addEventListener("click", onShowGetStartedButtonClick);
+}
+
+//#endregion
+
+//#region swiper employers
+                    
+const mySwiper = new Swiper(".swiper-container", {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+    nextEl: ".slider__right-button-block",
+    prevEl: ".slider__left-button-block",
+    },
+    
+});
+
+const clients = document.querySelector(".clients");
+
+if(clients) {
+    const swiper = new Swiper(".clients-swiper-container", {
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disabledOnInteractive:false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '"></span>';
+            },
+        },
+    });
+}
+
+//#endregion
+
+//#region swiper worksFilter
 function showAllWorkIllustrations() {
     const workIllustrations = document.querySelectorAll(".work-illustration");
 
@@ -40,65 +139,6 @@ function onFilterItemClick(filterElement) {
         showFilterItemWorkIllustration(filterElement);
     }
 }
-//#endregion
-
-//#region modal get start
-const modal = document.querySelector('#modal-get-started');
-const btnStarted = document.querySelector('#btn-get-started');
-const btnContacts = document.querySelector('#btn-get-contact');
-const closeSpan = document.querySelector('.modal-close');
-
-btnStarted.addEventListener('click',onBtnStartedClick);
-
-function onBtnStartedClick(){
-    modal.style.display = 'block';
-
-
-    closeSpan.addEventListener('click',onCloseSpanClick);
-
-    function onCloseSpanClick() {
-        modal.style.display = 'none';
-        modalEventHandlerClear();
-    };
-
-    btnContacts.addEventListener('click', onBtnContactsClick);
-
-    function onBtnContactsClick() {
-        modal.style.display = 'none';
-        window.location = '#Contact';
-        modalEventHandlerClear();
-    };
-
-    window.addEventListener('click',onWindowClick);
-
-    function onWindowClick(event) {
-        if (event.target == modal) {
-            modal.style.display = 'none';
-            modalEventHandlerClear();
-        };
-    };
-
-    window.addEventListener('keydown', onWindowKeydownEscape );
-
-    function onWindowKeydownEscape(event) {
-        if (event.key === 'Escape') {
-            if (modal.style.display === 'block') {
-                modal.style.display = 'none';
-                modalEventHandlerClear();
-            };
-        };
-    };
-};
-
-function modalEventHandlerClear(){
-    modal.removeEventListener('click',onCloseSpanClick);
-    modal.removeEventListener('click',onBtnContactsClick);
-    window.removeEventListener('click',onWindowClick);
-    window.removeEventListener('keydown', onWindowKeydownEscape );
-}
-
-//#endregion
-
 
 const works = document.querySelector(".works");
 
@@ -109,49 +149,8 @@ if(works) {
         filterItem.addEventListener("click", () => onFilterItemClick(filterItem))
     });
 }
-
-const home = document.querySelector(".home");
-
-if(home) {
-    btnStarted.addEventListener('click',onBtnStartedClick);
-}
-
-//#region employer-swiper
-                    
-const mySwiper = new Swiper('.swiper-container', {
-    // Параметры слайдера
-    slidesPerView: 4,//设置slider容器能够同时显示的slides数量(carousel模式)。
-    spaceBetween: 30,
-    loop: true,
-    // Настройка навигации
-    navigation: {
-    nextEl: '.slider__right-button-block',
-    prevEl: '.slider__left-button-block',
-    },
-    
-});
-
 //#endregion
 
-const clients = document.querySelector(".clients");
-
-if(clients) {
-    const swiper = new Swiper(".clients-swiper-container", {
-        spaceBetween: 30,
-        loop: true,
-        autoplay: {
-            delay: 2500,
-            disabledOnInteractive:false,
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-            renderBullet: function (index, className) {
-                return '<span class="' + className + '"></span>';
-            },
-        },
-    });
-}
-
+//#region aos
 AOS.init();
-
+//#endregion

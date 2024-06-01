@@ -6,12 +6,10 @@
         <title>Index</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="index.css">
-        <link rel="stylesheet" href="aos/aos.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/aos.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="swiper/swiper-bundle.min.css"/>
-        <!-- <link rel="preload" href="fonts/Roboto-Slab-Regular.woff2" as="font">
-        <link rel="preload" href="fonts/Roboto-Slab-Regular.woff" as="font"> -->
+        <link rel="stylesheet" href="css/swiper-bundle.min.css">
     </head>
     <body>
         <header>
@@ -42,16 +40,15 @@
                 </li>
             </menu>
         </header>
-
         <section class="home" id="Home">
             <div class="home__bg-toner"></div>
-            <div class="home__elements" data-aos="zoom-in" data-aos-duration="1500" data-aos-easing="liner">
+            <div class="home__elements">
                 <h2 >welcome to startup</h2>
                 <p >your favourite creative agency template</p>
                 <button type="button" id="btn-get-started">get started</button>
                 <div id="modal-get-started" class="modal hidden">
                     <div class="modal-content">
-                        <span class="modal-close">&times;</span>
+                        <button class="modal-close" type="button">&times;</button>
                         <h3>Get started</h3>
                         <p>
                             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam nonumy eirtempor
@@ -60,12 +57,13 @@
                             Lorem ipsum dolor sit amet. Lorem ipsum dolor et dolore aliquyam erat. Loreipsum
                             dolor sit amet. Lorem ipsum dolor et.
                         </p>
-                        <button id="btn-get-contact">contact with us</button>
+                        <a href="#Contact">
+                            <button id="btn-get-contact" type="button">contact with us</button>
+                        </a>
                       </div>
                 </div>
             </div>
         </section>
-
         <section class="services" id="Services" data-aos="fade-up">
             <h2 class="section__title">services</h2>
             <p class="section__title-description">we offer ipsum dolor sit amet, consetetur sadipscing elitr amet</p>
@@ -93,7 +91,6 @@
                 </div>
             </div>
         </section>
-
         <section class="about" id="About" >
             <div class="content">
                 <h2 class="section__title">about as</h2>
@@ -118,9 +115,6 @@
                         </p>    
                     </div>  
                 </div>
-
-
-
                 <div class="swiper-container">
                     <!-- Дополнительная оболочка для слайдов -->
                     <div class="swiper-wrapper">
@@ -244,18 +238,15 @@
                             <p>slide left</p>
                         </button>
                     </div>
-                    <!-- <div class="swiper-button-next"> -->
-                        <div class="slider__right-button-block">
-                            <button type="button" id="employers-slider-right">
-                                <i class="employer_slider_angel fa fa-angle-right" aria-hidden="true"></i>
-                                <p>slide right</p>
-                            </button>
-                        </div>
-                    <!-- </div> -->
+                    <div class="slider__right-button-block">
+                        <button type="button" id="employers-slider-right">
+                            <i class="employer_slider_angel fa fa-angle-right" aria-hidden="true"></i>
+                            <p>slide right</p>
+                        </button>
+                    </div>
                   </div>
             </div>
         </section>
-
         <section class="works" id="Works">
             <h2 class="section__title">latest works</h2>
             <menu class="works__filters">
@@ -657,8 +648,8 @@
                 </p>
             </div>
         </footer>
-        <script src="swiper/swiper-bundle.min.js"></script>
-        <script src="aos/aos.js"></script>
+        <script src="scripts/aos.js"></script>
+        <script src="scripts/swiper-bundle.min.js"></script>
         <script src="scripts/main.js"></script>
     </body>
 </html>

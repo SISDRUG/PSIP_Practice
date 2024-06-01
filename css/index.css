@@ -1,15 +1,15 @@
 @font-face {
     font-family: "Roboto-Slab";
-    src: url("fonts/Roboto-Slab-Regular.woff2") format("woff2"), 
-        url("fonts/Roboto-Slab-Regular.woff") format("woff");
+    src: url("../fonts/Roboto-Slab-Regular.woff2") format("woff2"), 
+        url("../fonts/Roboto-Slab-Regular.woff") format("woff");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Montserrat";
-    src: url("fonts/Montserrat-Regular.woff2") format("woff2"), 
-        url("fonts/Montserrat-Regular.woff") format("woff");
+    src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), 
+        url("../fonts/Montserrat-Regular.woff") format("woff");
     font-weight: 400;
     font-style: normal;
 }
@@ -17,12 +17,9 @@
 .swiper-container{
     width: 1140px;
     position: relative;
+    z-index: 0;
     margin-top: 70px;
     overflow: hidden;
-}
-
-.swiper-wrapper{
-    width: 1140px;
 }
 
 .swiper-button-prev{
@@ -115,8 +112,7 @@ header{
     flex-direction: column;
     align-items: center;
     height: 770px;
-    background-image: url(assets/1_home/home_bg.png);
-    /* background-position-x: center; */
+    background-image: url(../assets/1_home/home_bg.png);
     background-repeat: round;
     margin-top: -103px;
 }
@@ -175,7 +171,7 @@ header{
 
 .modal{
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     left: 0;
     top: 0;
     width: 100%;
@@ -188,13 +184,13 @@ header{
     display: none;
 }
 
-.modal-content {
+/* .modal-content {
     background-color: #555;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%; 
-}
+} */
 
 .modal-content h3{
     font-size: 36px;
@@ -205,6 +201,7 @@ header{
 
 /* Кнопка закрыть (x) */
 .modal-close {
+    width: 30px;
     color: #aaa;
     float: right;
     font-size: 28px;
@@ -671,7 +668,7 @@ img:hover + .caption{
 }
 
 .offer {
-    background-image: url(assets/5_call_to_action_parallax/bg.png);
+    background-image: url(../assets/5_call_to_action_parallax/bg.png);
     background-position: center;
     background-size: cover;
     height: 170px;
@@ -880,6 +877,7 @@ img:hover + .caption{
 }
 
 .clients-swiper-container {
+    z-index: 0;
     position: relative;
     overflow: hidden;
     width: 765px;

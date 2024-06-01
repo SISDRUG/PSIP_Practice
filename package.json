@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "aos": "^2.3.4",
+    "cleave-zen": "^0.0.17",
+    "cleave.js": "^1.6.0",
     "swiper": "^11.1.4"
   }
 }

@@ -154,3 +154,11 @@ if(works) {
 //#region aos
 AOS.init();
 //#endregion
+
+
+
+const cleave = new Cleave(".input-tel", {
+    delimiters: [" (",") ","-"],
+    blocks: [4,2, 3, 2, 2],
+    uppercase: true
+});

@@ -997,6 +997,7 @@ img:hover + .caption{
     height: 68px;
     width: 688px;
     padding: 18px;
+    margin-bottom: 22px;
     border: 1px solid #555;
     resize: vertical;
 }

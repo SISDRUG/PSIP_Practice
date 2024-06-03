@@ -597,14 +597,22 @@
                             </div>
                         </div>
                     </div>
-                    <form class="contact-form">
+                    <form class="contact-form" id="contact-form">
                         <div class="contact-form__flex-container">
-                            <input type="text" placeholder="your name" name="name" autocomplete="name">
-                            <input type="email" placeholder="your e-mail" name="email" autocomplete="email">
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="your name" name="name" autocomplete="name" data-parsley-maxlength="32">
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="email" placeholder="your e-mail" name="email" autocomplete="email" data-parsley-maxlength="255">
+                            </div>
                         </div>
                         <div class="contact-form__flex-container">
-                            <input type="text" placeholder="your subject" name="subject">
-                            <input type="text" placeholder="company name" name="company" autocomplete="organization">
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="your subject" name="subject" data-parsley-maxlength="32">
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="company name" name="company" autocomplete="organization" data-parsley-maxlength="32">
+                            </div>
                         </div>
                         <textarea class="contact-form__input message" placeholder="write your message" name="message"></textarea>
                         <div class="contact-form__flex-container">
@@ -652,6 +660,8 @@
                 </p>
             </div>
         </footer>
+        <script src="scripts/jquery.js"></script>
+        <script src="scripts/parsley.min.js"></script>
         <script src="scripts/aos.js"></script>
         <script src="swiper/swiper-bundle.min.js"></script>
         <script src="cleave.js/dist/cleave.js"></script>

@@ -155,10 +155,14 @@ if(works) {
 AOS.init();
 //#endregion
 
+//#region parsley contactForm
+$('#contact-form').parsley();
+//#endregion
 
-
+//#region cleave contactForm phone
 const cleave = new Cleave(".input-tel", {
     delimiters: [" (",") ","-"],
     blocks: [4,2, 3, 2, 2],
     uppercase: true
 });
+//#endregion

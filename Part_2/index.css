@@ -1,0 +1,451 @@
+@font-face {
+    font-family: "Back-to-Black-Demo";
+    src: url("fonts/Back-to-Black-Demo.woff2") format("woff2"), 
+        url("fonts/Back-to-Black-Demo.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src: url("fonts/OpenSans-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Vidaloka";
+    src: url("fonts/Vidaloka-Regular.woff2") format("woff2"), 
+        url("fonts/Vidaloka-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+.col{
+    padding: 0%;
+}
+
+
+.title {
+    font-family: "Vidaloka", "Arial", serif;
+    font-size: 36px;
+    color: rgb(51, 51, 51);
+    line-height: 2.668;
+    text-transform: capitalize;
+    margin-top: 125px;
+}
+
+.title_sub{
+    font-size: 16px;
+    font-family: "OpenSans", "Arial", sans-serif;
+    color: rgb(150, 149, 149);
+    line-height: 1.625;
+    width: 746px;
+    height: 43px;
+}
+
+.filters{
+    width:720px;
+    margin: auto;
+    margin-top: 120px;
+}
+
+.filters button{
+    background: none;
+    text-align: center;
+    border: solid 2px rgb(255, 218, 0);
+    height: 44px;
+}
+
+.filters .active{
+    background: rgb(255, 218, 0);
+}
+
+.filters button span{
+    font-size: 14px;
+    font-family: "OpenSans", "Arial", serif;
+    color: rgb(24, 26, 31);
+    text-transform: capitalize;
+    margin: auto 30px;
+}
+
+.presentation{
+    margin: auto;
+    margin-top: 120px;
+}
+
+.col--first{
+    max-width: fit-content; 
+}
+
+
+
+.presentation-hover-box{
+    display: none;
+    background-color: rgba(255, 218, 0, 0.8);
+    height: 100%;
+    padding: 60px 70px;
+    padding-right: 120px;
+}
+
+.presentation-hover-box h3{
+    font-size: 30px;
+    font-family: "Vidaloka", "Arial", sans-serif;
+    color: rgb(0, 0, 0);
+    line-height: 3.202;
+    text-align: left;
+    text-transform: capitalize;
+}  
+
+.presentation-hover-box p{
+    font-size: 16px;
+    font-family: "OpenSans";
+    color: rgb(67, 66, 66);
+    line-height: 1.625;
+    margin: 0;
+}
+
+.presentation-hover-box button{
+        border:solid 2px rgb(0, 0, 0);
+        background: none;
+        width: 178px;
+        height: 45px;
+        text-transform: capitalize;
+        margin-top: 60px;
+}
+
+.col.position-relative:hover div{
+    display: block;
+}
+
+.projects-presentation{
+    max-width: 1140px;
+    margin: 125px auto 160px auto;
+}
+
+
+.projects-presentation *.col {
+    height: 300px;
+    max-width: 360px;
+    margin-top: 30px;
+    padding: 0 20px;
+}
+
+.projects-presentation .row *.col h3{
+    font-size: 20px;
+    font-family: "Vidaloka", "Arial", sans-serif;
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    text-transform: capitalize;
+    margin-top: 90px;
+}
+
+.projects-presentation .row *.col p{
+    font-size: 13px;
+    font-family: "OpenSans", "Arial", serif; 
+    color: rgb(255, 255, 255);  
+    line-height: 1.2;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.projects-presentation .row *.col a{
+    font-size: 14px;
+    font-family: "OpenSans", "Arial", serif;
+    color: rgb(255, 235, 59);
+    text-transform: capitalize;
+    line-height: 1.929;
+    margin-top: 40px;
+}
+
+.col.red{
+    background: rgb(255, 82, 82);
+}
+  
+.col.green{
+    background: rgb(76, 175, 80);
+}
+
+.col.purple{
+    background: rgb(103, 58, 183);
+}
+  
+.col.blue{
+    background: rgb(33, 150, 243);
+}
+
+
+.col.yellow{
+    background: rgb(255, 235, 59);
+}
+
+.col.yellow h3{
+    color: black !important;
+}
+
+.col.yellow p{
+    color: black !important; 
+}
+
+.col.yellow a{
+    color: black !important;
+}
+
+.col.sky{
+    background: rgb(0, 188, 212);
+}
+
+.clients{
+    background-image: url("assets/7_clients/bg.png");
+    padding-top: 120px;
+    padding-bottom: 180px;
+    
+}
+
+.col--clients{
+    max-width: 1140px;
+}
+
+.title--clients{
+    font-family: "Vidaloka", "Arial", serif;
+    font-size: 36px;
+    color: rgb(255, 255, 255);
+    line-height: 2.668;
+    text-transform: capitalize;
+}
+
+.title_sub--clients{
+    font-size: 16px;
+    font-family: "OpenSans";
+    color: rgb(150, 149, 149);
+    line-height: 1.625;
+    padding-right: 250px;
+}
+
+
+.carousel-indicators [data-bs-target]{
+    border: none;
+    background: white;
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+}
+
+.carousel-indicators button.active{
+    background: rgb(255, 218, 0);
+    max-width: 10px;
+    height: 10px;
+}
+
+.row--carousel{
+    max-width: 1010px;
+    margin: auto;
+}
+
+.row.row--carousel *.col {
+    margin: auto;
+    max-width: fit-content;
+    max-height: fit-content;
+}
+
+.carousel-indicators--position{
+    top:95px;
+}
+
+.carousel--clients{
+    margin-top: 120px;
+}
+
+
+.title_sub--team{
+    font-size: 16px;
+    font-family: "OpenSans";
+    color: rgb(150, 149, 149);
+    line-height: 1.625;
+    width: 450px;
+}
+
+.row--team{
+    max-width: 1170px;
+    margin: 110px auto 140px auto;
+}
+
+.col--team{
+    max-width: fit-content;
+}
+
+.employer-info{
+    border: solid 1px rgb(241, 241, 241);
+}
+
+.employer-links{
+    max-width: 187px;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.employer-links col.link-border{
+    width: 40px;
+}
+
+.employer-info h3{
+    font-size: 16px;
+    font-family: "Vidaloka ";
+    color: rgb(49, 49, 49);
+    text-transform: capitalize;
+    margin-top: 20px;
+}
+
+.employer-info p{
+    font-size: 13px;
+    font-family: "OpenSans","Arial",sans-serif;
+    max-width: 322px;
+    color: #969595;
+    margin: 30px auto;
+}
+
+.link-container-border{
+    border: solid 1px rgb(241, 241, 241);
+}
+
+.link-border{
+    cursor: pointer;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(241, 241, 241);
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    max-width: 38px;
+    height: 39px;
+    text-decoration: none;
+}
+
+.ico{
+    font-size: 16px;
+    font-family: "FontAwesome";
+    color: rgb(218, 218, 218);
+    margin: auto;
+}
+
+.link-border:hover{
+    background: rgb(255, 235, 59);
+}
+
+.link-border:hover .ico{
+    color: white;
+}
+
+.joinus{
+    background-image: url("assets/9_joinus/bg.png");
+    padding-top: 140px;
+    padding-bottom: 100px;
+}
+
+.title--joinus{
+    font-family: "Vidaloka", "Arial", serif;
+    font-size: 36px;
+    color: rgb(255, 255, 255);
+    line-height: 2.668;
+    text-transform: capitalize;
+}
+
+.title_sub--joinus{
+    font-size: 16px;
+    font-family: "OpenSans", "Arial", sans-serif;
+    color: rgb(150, 149, 149);
+    line-height: 1.625;
+    margin: auto;
+    margin-bottom: 60px;
+    max-width: 460px;
+}
+ 
+.row-email{
+    max-width: 625px;
+    margin: auto;
+}
+
+.row-email *.col{
+    height: 50px;
+}
+
+.row-email .col input{
+    font-size: 15px;
+    font-family: "OpenSans";
+    color: rgb(255, 255, 255);
+    line-height: 2.2;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 460px;
+    height: 50px;
+    padding: 16px 26px;
+}  
+
+.row-email .col button{
+    font-size: 14px;
+    font-family: "OpenSans";
+    color: rgb(0, 0, 0);
+    line-height: 2.357;
+    text-transform: uppercase;
+    border: none;
+    background-color: rgb(255, 235, 59);
+    width: 139px;
+    height: 50px;
+    padding: 0%;
+}
+
+footer{
+    padding: 40px;
+    background-image: url("assets/footer_bg.png") ;
+}
+
+.logo-title{
+    position: relative;
+    font-size: 34px;
+    font-family: "Back-to-Black-Demo", "Arial", serif;
+    text-transform: capitalize;
+    color: rgb(255, 255, 255);
+    line-height: 0.971;
+}
+
+.logo-title_template{
+    position: absolute;
+    font-size: 12px;
+    font-family: "Vidaloka ";
+    color: rgb(229, 67, 43);
+    line-height: 2.75;
+    bottom: -15px;
+    right: 5px;
+}
+
+footer p{
+    font-size: 14px;
+    font-family: "Vidaloka ";
+    color: rgb(255, 255, 255);
+    line-height: 2.357;
+    text-transform: capitalize;
+    margin-top: 40px;
+    margin-bottom: 45px;
+}
+
+footer p span{
+    color: #ffeb3b;
+}
+
+.row--footer{
+    max-width: 135px;
+}
+
+.col--footer{
+    max-width: fit-content;
+}
+
+.col--footer i{
+    color: white;
+    font-size: 26px;
+    line-height: 1.2;
+}
+
+
+  
+  

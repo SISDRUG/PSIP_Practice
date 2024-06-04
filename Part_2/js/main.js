@@ -1,32 +1,48 @@
 $('#email-form').parsley();
 
 
-// Получаем все кнопки с классом 'filter'
+
 const filters = document.querySelectorAll('.filter');
+const blocks = {
+    all: document.querySelectorAll('.col--all'),
+    design: document.querySelectorAll('.col--design'),
+    code: document.querySelectorAll('.col--code'),
+    apps: document.querySelectorAll('.col--apps'),
+    photography: document.querySelectorAll('.col--photography')
+};
 
-// Функция для сброса класса 'active' и скрытия всех блоков
-function resetActiveAndHideBlocks() {
-  filters.forEach(filter => {
-    filter.classList.remove('active'); // Убираем класс 'active' у всех кнопок
-    const category = filter.id; // Получаем id кнопки, который соответствует категории
-    document.querySelectorAll(`.col--${category}`).forEach(col => {
-      col.style.display = 'none'; // Скрываем все блоки этой категории
+
+function removeActive(){
+    filters.forEach(filter => filter.classList.remove('active'));
+};
+
+// function hideBlocks(){
+//     filters.forEach(filter => {
+//         blocks[filter.id].forEach(col => col.style.display = 'none');
+//       });
+// };
+
+function hideBlocks(){
+    Object.values(blocks).forEach(cols => {
+        cols.forEach(col => col.style.display = 'none');
     });
-  });
-}
+};
 
-// Функция для установки класса 'active' и отображения блоков определенной категории
-function setActiveAndShowBlocks(category) {
-  document.querySelector(`#${category}`).classList.add('active'); // Добавляем класс 'active' выбранной кнопке
-  document.querySelectorAll(`.col--${category}`).forEach(col => {
-    col.style.display = 'block'; // Показываем все блоки этой категории
-  });
-}
+function setActive(filter){
+    filter.classList.add('active');
+};
 
-// Добавляем обработчик событий на каждую кнопку
+  
+function showBlocks(filter) {
+    blocks[filter.id].forEach(col => col.style.display = 'block');
+}
+  
 filters.forEach(filter => {
-  filter.addEventListener('click', () => {
-    resetActiveAndHideBlocks(); // Сбрасываем все до начального состояния
-    setActiveAndShowBlocks(filter.id); // Устанавливаем 'active' и показываем блоки для выбранной категории
-  });
+    filter.addEventListener('click', () => {
+        removeActive();
+        hideBlocks()
+        setActive(filter)
+        showBlocks(filter);
+    });
 });
+  

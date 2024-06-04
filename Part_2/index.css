@@ -75,20 +75,83 @@
 }
 
 
+
+#myMosaicAll{
+    margin-top: 120px;
+    margin-bottom: 125px;
+    max-height: 900px;
+}
+
+#myMosaicAll div img{
+    width: 100%;
+    height: auto;
+}
+
+#myMosaicDesign{
+    margin-top: 120px;
+    margin-bottom: 125px;
+    max-height: 900px;
+}
+
+#myMosaicDesign div img{
+    width: 100%;
+    height: auto;
+}
+
+#myMosaicCode{
+    margin-top: 120px;
+    margin-bottom: 125px;
+    max-height: 900px;
+}
+
+#myMosaicCode div img{
+    width: 100%;
+    height: auto;
+}
+
+#myMosaicPhotography{
+    margin-top: 120px;
+    margin-bottom: 125px;
+    max-height: 900px;
+}
+
+#myMosaicPhotography div img{
+    width: 100%;
+    height: auto;
+}
+
+#myMosaicApps{
+    margin-top: 120px;
+    margin-bottom: 125px;
+    max-height: 900px;
+}
+
+#myMosaicApps div img{
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+
+
 .col--design{
-    display: none;
+    display: block;
 }
 
 .col--code{
-    display: none;
+    display: block;
 }
 
 .col--photography{
-    display: none;
+    display: block;
 }
 
 .col--apps{
-    display: none;
+    display: block;
 }
 
 .col--all{
@@ -111,17 +174,17 @@
     display: none;
     background-color: rgba(255, 218, 0, 0.8);
     height: 100%;
+    padding: 10%;
 }
 
 .presentation-hover-box h3{
     font-size: 30px;
     font-family: "Vidaloka", "Arial", sans-serif;
     color: rgb(0, 0, 0);
-    line-height: 3.202;
+    line-height: 1.202;
     text-align: left;
     text-transform: capitalize;
-    max-width: fit-content;
-    padding-left: 70px;
+    padding-left: 10px;
 }  
 
 .presentation-hover-box p{
@@ -129,10 +192,10 @@
     font-family: "OpenSans";
     color: rgb(67, 66, 66);
     line-height: 1.625;
-    max-width: fit-content;
     margin: 0;
-    padding-left: 70px;
-    padding-right: 120px;
+    margin-left: 10px;
+    margin-right: 10px;
+    max-height: 120px;
 }
 
 .presentation-hover-box button{
@@ -143,11 +206,10 @@
     padding-right: 40px;
     height: 45px;
     text-transform: capitalize;
-    margin-top: 60px;
-    margin-left: 70px;
+    margin-top: 100px;
 }
 
-.col.position-relative:hover div{
+.position-relative:hover div{
     display: block;
 }
 

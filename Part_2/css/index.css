@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "Back-to-Black-Demo";
+    src: url("../fonts/Back-to-Black-Demo.woff2") format("woff2"), 
+        url("../fonts/Back-to-Black-Demo.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src: url("../fonts/OpenSans-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Vidaloka";
+    src: url("../fonts/Vidaloka-Regular.woff2") format("woff2"), 
+        url("../fonts/Vidaloka-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}

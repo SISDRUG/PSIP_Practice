@@ -1,3 +1,14 @@
+const searchForm = document.querySelector('#search-form');
+const searchButton = searchForm.querySelector('.search-form__button');
+
+function onSerchButtonMouseover() {
+    const searchInput = searchForm.querySelector('.search-form__input');
+    searchInput.classList.replace('invisible', 'visibility');
+}
+
+searchButton.addEventListener('mouseover', onSerchButtonMouseover);
+
+
 $('#email-form').parsley();
 $('#myMosaicAll').Mosaic({       
     maxRowHeight: 800,     
@@ -84,4 +95,3 @@ filters.forEach(filter => {
         showBlocks(filter);
     });
 });
-  

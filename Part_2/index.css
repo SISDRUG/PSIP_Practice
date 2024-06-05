@@ -21,6 +21,161 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "fontawesome-webfont";
+    src: url("../fonts/fontawesome-webfont.woff") format("woff2"), 
+        url("../fonts/fontawesome-webfont.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+.navbar-brand {
+    font-family: "Back-to-Black-Demo", "Arial", sans-serif;
+    font-size: 30px;
+    position: relative;
+    height: 50px;
+    color: #fff;
+}
+
+.navbar-brand:hover {
+    color: #fff;
+}
+
+.navbar-brand img {
+    height: 50px;
+}
+
+
+.navbar-brand__subtitle {
+    font-family: "Vidaloka", "Arial", sans-serif;
+    font-size: 12px;
+    color: #E5432B;
+    position: absolute;
+    bottom: -3px;
+    right: 0px;
+}
+
+
+.nav-item a{
+    font-family: "Vidaloka", "Arial", sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.nav-item a:hover {
+    color:#FFEB3B;
+}
+
+.search-form__input {
+    border: 1px solid #fff;
+    outline: none;
+}
+
+.search-form__button {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    border: 0px;
+    border-left: 1px solid #fff;
+    padding-left: 25px;
+}
+
+.search-form__button i {
+    color: #fff;
+}
+
+.search-form__button:hover,
+.search-form__button:hover i {
+    border-color: #FFEB3B;
+    color: #FFEB3B;
+}
+
+.home {
+    margin-top: -50px;
+    padding: 0px;
+}
+
+.home-carousel {
+    position: relative;
+}
+
+.carousel__title h2{
+    font-family: "Back-to-Black-Demo", "Arial", sans-serif;
+    font-size: 80px;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel__title h2 span {
+    font-size: 250px;
+}
+
+.servises {
+    margin: 125px;
+}
+
+.servises h2 {
+    font-family: "Vidaloka", "Arial", sans-serif;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 158px;
+}
+
+.servises h2 span {
+    text-decoration: underline;
+    color: #FFEB3B;
+}
+
+.quality-card i {
+    font-size: 30px;
+    color: #969595;
+}
+
+.quality-card i:hover {
+    color:#FFEB3B;
+}
+
+.quality-card__content h3 {
+    font-family: "Vidaloka", "Arial", sans-serif;
+    font-size: 18px;
+    text-transform: capitalize;
+    color: #313131;
+}
+
+.quality-card__content p {
+    color: #969595;
+}
+
+.achievements {
+    text-align: center;
+    color: #FFEB3B;
+    background: url(assets/footer_bg.png);
+    padding-top: 95px;
+    padding-bottom: 90px;
+}
+
+.achievement i {
+    font-size: 45px;
+}
+
+.achievement p {
+    font-family: "Vidaloka", "Arial", sans-serif;
+}
+
+.achievement__numbers {
+    font-size: 50px;
+    color: #fff;
+}
+
+.achievement__title {
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+
+
 .col{
     padding: 0%;
 }
@@ -189,7 +344,7 @@
 
 .presentation-hover-box p{
     font-size: 16px;
-    font-family: "OpenSans";
+    font-family: "OpenSans", "Arial", sans-serif;
     color: rgb(67, 66, 66);
     line-height: 1.625;
     margin: 0;
